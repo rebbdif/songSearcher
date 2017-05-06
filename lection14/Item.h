@@ -7,10 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "UIKit/UIKit.h"
 
 @interface Item : NSObject
-@property(strong,nonatomic)NSString * artistName;
-@property(strong,nonatomic)NSString * trackName;
+
+@property(strong,nonatomic)NSString *artistName;
+@property(strong,nonatomic)NSString *albumName;
+@property(strong,nonatomic)NSString *trackName;
+@property(strong,nonatomic)NSString *price;
+@property(strong,nonatomic)UIImage *thumbnail;
+
 + (Item * )itemWithDictionary: (NSDictionary*) dict;
 
 @end

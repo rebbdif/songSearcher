@@ -11,10 +11,13 @@
 #import "Item.h"
 #import "TableViewController.h"
 #import "TableViewCell.h"
+
 @interface TableViewController () <UISearchBarDelegate>
+
 @property(strong,nonatomic) SearchResultsModel *model;
 @property(strong,nonatomic) UISearchBar *searchBar;
 @property(strong,nonatomic) NSString *searchRequest;
+
 @end
 
 @implementation TableViewController
@@ -33,20 +36,20 @@ static  NSString * reuseID =@"cell";
     [self.searchBar sizeToFit];
     
     [self.tableView registerClass:[TableViewCell class] forCellReuseIdentifier:reuseID];
-    
-   }
+    self.tableView.rowHeight=56;
+}
 
-# pragma mark - Search Bar Delegate
+#pragma mark - Search Bar Delegate
+
 -(void)searchBarSearchButtonClicked:(UISearchBar *)searchBar{
     self.searchRequest= searchBar.text;
     [searchBar endEditing:YES];
     if(self.searchRequest){
         self.model=nil;
         self.model = [SearchResultsModel new];
-        [self.model getItemsForRequest:self.searchRequest WithCompletionHandler:^{
+        [self.model getItemsForRequest:self.searchRequest withCompletionHandler:^{
             [self.tableView reloadData];
         }];
-
     }
 }
 
@@ -60,13 +63,22 @@ static  NSString * reuseID =@"cell";
     return self.model.items.count;
 }
 
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     TableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: reuseID forIndexPath:indexPath];
     Item *currentItem= self.model.items[indexPath.row];
-    
-    cell.textLabel.text=currentItem.trackName;
-    cell.detailTextLabel.text=currentItem.artistName;
+    cell.trackName.text = currentItem.trackName;
+    if (currentItem.albumName){
+        cell.artistName.text = [NSString stringWithFormat:@"%@ [%@]",currentItem.artistName, currentItem.albumName];
+    }else{
+        cell.artistName.text = currentItem.artistName;
+    }
+    cell.price.text = currentItem.price;
+    cell.price.adjustsFontSizeToFitWidth=YES;
+    if(!currentItem.thumbnail){
+        cell.thumbnail.image = [UIImage imageNamed:@"music"];
+    }else{
+        cell.thumbnail.image = currentItem.thumbnail;
+    }
     
     return cell;
 }

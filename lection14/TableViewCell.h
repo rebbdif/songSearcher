@@ -10,4 +10,10 @@
 
 @interface TableViewCell : UITableViewCell
 
+@property (strong,nonatomic) UILabel *trackName;
+@property (strong,nonatomic) UILabel *artistName;
+@property (strong,nonatomic) UILabel *album;
+@property (strong,nonatomic) UILabel *price;
+@property (strong,nonatomic) UIImageView *thumbnail;
+
 @end

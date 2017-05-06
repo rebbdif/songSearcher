@@ -10,5 +10,5 @@
 
 @interface SearchResultsModel : NSObject
 @property(copy,nonatomic) NSArray *items;
--(void)getItemsForRequest: (NSString*) request WithCompletionHandler: (void (^)(void))completionHandler;
+-(void)getItemsForRequest: (NSString*) request withCompletionHandler: (void (^)(void))completionHandler;
 @end

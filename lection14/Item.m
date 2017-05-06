@@ -9,10 +9,13 @@
 #import "Item.h"
 
 @implementation Item
-+ (Item * )itemWithDictionary: (NSDictionary*) dict{
+
++ (Item *)itemWithDictionary: (NSDictionary*) dict{
     Item *item=[Item new];
     item.artistName=dict[@"artistName"];
     item.trackName=dict[@"trackName"];
+    item.albumName=dict[@"collectionName"];
+    item.price=[NSString stringWithFormat:@"%@", dict[@"trackPrice"]];
     
     return item;
 }

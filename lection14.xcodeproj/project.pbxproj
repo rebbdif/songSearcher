@@ -13,12 +13,12 @@
 		04E2FFAA1EBB90A50074C5D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04E2FFA91EBB90A50074C5D9 /* Assets.xcassets */; };
 		04E2FFAD1EBB90A50074C5D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04E2FFAB1EBB90A50074C5D9 /* LaunchScreen.storyboard */; };
 		04E2FFB81EBB90A50074C5D9 /* lection14Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E2FFB71EBB90A50074C5D9 /* lection14Tests.m */; };
-		04E2FFC41EBB92700074C5D9 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E2FFC31EBB92700074C5D9 /* MainViewController.m */; };
 		04E2FFC71EBBA0E20074C5D9 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E2FFC61EBBA0E20074C5D9 /* TableViewController.m */; };
 		04E2FFCA1EBBA11F0074C5D9 /* SearchResultsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E2FFC91EBBA11F0074C5D9 /* SearchResultsModel.m */; };
 		04E2FFCD1EBBA1480074C5D9 /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E2FFCC1EBBA1480074C5D9 /* NetworkManager.m */; };
 		04E2FFD01EBBA60F0074C5D9 /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E2FFCF1EBBA60F0074C5D9 /* Item.m */; };
 		04E2FFD61EBBAC570074C5D9 /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E2FFD51EBBAC570074C5D9 /* TableViewCell.m */; };
+		63ACEF3E1EBD3F53007C0D41 /* Masonry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63ACEF3C1EBD3B37007C0D41 /* Masonry.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,8 +43,6 @@
 		04E2FFB31EBB90A50074C5D9 /* lection14Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = lection14Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		04E2FFB71EBB90A50074C5D9 /* lection14Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = lection14Tests.m; sourceTree = "<group>"; };
 		04E2FFB91EBB90A50074C5D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		04E2FFC21EBB92700074C5D9 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
-		04E2FFC31EBB92700074C5D9 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		04E2FFC51EBBA0E20074C5D9 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
 		04E2FFC61EBBA0E20074C5D9 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
 		04E2FFC81EBBA11F0074C5D9 /* SearchResultsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchResultsModel.h; sourceTree = "<group>"; };
@@ -55,6 +53,7 @@
 		04E2FFCF1EBBA60F0074C5D9 /* Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Item.m; sourceTree = "<group>"; };
 		04E2FFD41EBBAC570074C5D9 /* TableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewCell.h; sourceTree = "<group>"; };
 		04E2FFD51EBBAC570074C5D9 /* TableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewCell.m; sourceTree = "<group>"; };
+		63ACEF3C1EBD3B37007C0D41 /* Masonry.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Masonry.framework; path = Carthage/Build/iOS/Masonry.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63ACEF3E1EBD3F53007C0D41 /* Masonry.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +81,7 @@
 				04E2FF991EBB90A50074C5D9 /* lection14 */,
 				04E2FFB61EBB90A50074C5D9 /* lection14Tests */,
 				04E2FF981EBB90A50074C5D9 /* Products */,
+				63ACEF3B1EBD3B36007C0D41 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -126,8 +127,6 @@
 		04E2FFD11EBBABF70074C5D9 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				04E2FFC21EBB92700074C5D9 /* MainViewController.h */,
-				04E2FFC31EBB92700074C5D9 /* MainViewController.m */,
 				04E2FFC51EBBA0E20074C5D9 /* TableViewController.h */,
 				04E2FFC61EBBA0E20074C5D9 /* TableViewController.m */,
 			);
@@ -176,6 +175,14 @@
 			name = Application;
 			sourceTree = "<group>";
 		};
+		63ACEF3B1EBD3B36007C0D41 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				63ACEF3C1EBD3B37007C0D41 /* Masonry.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -186,6 +193,8 @@
 				04E2FF931EBB90A50074C5D9 /* Sources */,
 				04E2FF941EBB90A50074C5D9 /* Frameworks */,
 				04E2FF951EBB90A50074C5D9 /* Resources */,
+				63ACEF411EBD42AC007C0D41 /* ShellScript */,
+				63ACEF421EBD42B2007C0D41 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -274,6 +283,36 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		63ACEF411EBD42AC007C0D41 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Masonry.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+		63ACEF421EBD42B2007C0D41 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		04E2FF931EBB90A50074C5D9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -287,7 +326,6 @@
 				04E2FF9C1EBB90A50074C5D9 /* main.m in Sources */,
 				04E2FFC71EBBA0E20074C5D9 /* TableViewController.m in Sources */,
 				04E2FFCA1EBBA11F0074C5D9 /* SearchResultsModel.m in Sources */,
-				04E2FFC41EBB92700074C5D9 /* MainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,6 +454,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 4BVAFGEHDW;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = lection14/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = sbt.lection14;
@@ -428,6 +470,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 4BVAFGEHDW;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = lection14/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = sbt.lection14;

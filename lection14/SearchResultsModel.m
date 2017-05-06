@@ -12,8 +12,9 @@
 
 @implementation SearchResultsModel
 
--(void)getItemsForRequest: (NSString*) request WithCompletionHandler: (void (^)(void))completionHandler{
-    NSString * urls =[NSString stringWithFormat:@"https://itunes.apple.com/search?term=%@&limit=25",request];
+-(void)getItemsForRequest: (NSString*) request withCompletionHandler: (void (^)(void))completionHandler{
+    NSString *normalizedRequest=[request stringByReplacingOccurrencesOfString:@" " withString:@"+"];
+    NSString *urls =[NSString stringWithFormat:@"https://itunes.apple.com/search?term=%@",normalizedRequest];
     NSURL *url =[NSURL URLWithString:urls];
     [NetworkManager getModelFromURL:url withCompletionHandler:^(NSData *data) {
         self.items=[self parseData:data];
