@@ -9,5 +9,10 @@
 #import <Foundation/Foundation.h>
 
 @interface NetworkManager : NSObject
-+ (void)getModelFromURL: (NSURL *) url withCompletionHandler: (void (^)(NSData * data))completionHandler;
+
+@property (strong,nonatomic) NSMutableArray *highPriorityTasks;
+@property (strong,nonatomic) NSMutableArray *lowPriorityTasks;
+
+- (void)getModelFromURL: (NSURL *) url withCompletionHandler: (void (^)(NSData * data))completionHandler;
+- (void)downloadImageFromURL: (NSURL *)url withCompletionHandler:(void (^)(NSData *data))completionHandler;
 @end

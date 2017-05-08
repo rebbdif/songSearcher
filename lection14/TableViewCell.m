@@ -47,6 +47,7 @@
         make.bottom.equalTo(self.contentView.mas_bottom).with.offset(-2);
         make.size.mas_equalTo(self.contentView.mas_height).sizeOffset(CGSizeMake(-4, -4));
         _thumbnail.layer.cornerRadius=self.contentView.frame.size.height/2 -2;
+        _thumbnail.layer.masksToBounds = YES;
     }];
     [_price mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerY.equalTo(self.contentView.mas_centerY);
@@ -70,12 +71,5 @@
     [super updateConstraints];
 }
 
--(void)prepareForReuse{
-    self.trackName=nil;
-    self.thumbnail=nil;
-    self.price=nil;
-    self.artistName=nil;
-    self.album=nil;
-}
 
 @end

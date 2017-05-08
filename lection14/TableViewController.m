@@ -47,8 +47,11 @@ static  NSString * reuseID =@"cell";
     if(self.searchRequest){
         self.model=nil;
         self.model = [SearchResultsModel new];
+        __weak typeof(self) weakself=self;
         [self.model getItemsForRequest:self.searchRequest withCompletionHandler:^{
-            [self.tableView reloadData];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [weakself.tableView reloadData];
+            });
         }];
     }
 }
@@ -74,13 +77,31 @@ static  NSString * reuseID =@"cell";
     }
     cell.price.text = currentItem.price;
     cell.price.adjustsFontSizeToFitWidth=YES;
+    
     if(!currentItem.thumbnail){
         cell.thumbnail.image = [UIImage imageNamed:@"music"];
+        __weak typeof(self) weakself=self;
+        [self.model downloadThumbnailForItem:indexPath withCompletionHandler:^(NSIndexPath *indexpath){
+            dispatch_async(dispatch_get_main_queue(), ^{
+                TableViewCell * cell=[weakself.tableView cellForRowAtIndexPath:indexpath];
+                cell.thumbnail.image = ((Item *)(weakself.model.items[indexPath.row])).thumbnail;
+             //   cell.thumbnail.contentMode=UIViewContentModeScaleAspectFill;
+            });
+        }];
     }else{
         cell.thumbnail.image = currentItem.thumbnail;
     }
-    
     return cell;
 }
+
+- (void)didReceiveMemoryWarning{
+    [super didReceiveMemoryWarning];
+    [self.model.networkManager.lowPriorityTasks removeAllObjects];
+    for (Item *item in self.model.items){
+        item.thumbnail=nil;
+    }
+}
+
+
 
 @end

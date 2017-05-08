@@ -16,7 +16,8 @@
     item.trackName=dict[@"trackName"];
     item.albumName=dict[@"collectionName"];
     item.price=[NSString stringWithFormat:@"%@", dict[@"trackPrice"]];
-    
+    item.thumbnailURL=dict[@"artworkUrl60"];
     return item;
 }
+
 @end

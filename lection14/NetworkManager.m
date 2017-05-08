@@ -9,20 +9,44 @@
 #import "NetworkManager.h"
 
 @interface NetworkManager()
-
+@property (strong,nonatomic, readonly) NSURLSession *session;
 @end
 
 @implementation NetworkManager
 
-+ (void)getModelFromURL: (NSURL *) url withCompletionHandler: (void (^)(NSData * data))completionHandler{
-    NSURLSession * session=[NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
-    NSURLSessionDataTask * task = [session dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+-(instancetype)init{
+    self=[super init];
+    if(self){
+        _session=[NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
+        _highPriorityTasks = [NSMutableArray new];
+        _lowPriorityTasks = [NSMutableArray new];
+    }
+    return self;
+}
+
+- (void)getModelFromURL: (NSURL *) url withCompletionHandler: (void (^)(NSData * data))completionHandler{
+    NSURLSessionDataTask * task = [self.session dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         completionHandler(data);
         if(error){
             NSLog(@"error while downloading data %@",error.userInfo);
         }
     }];
+    task.priority=NSURLSessionTaskPriorityHigh;
     [task resume];
 }
+
+- (void)downloadImageFromURL: (NSURL *)url withCompletionHandler:(void (^)(NSData *data))completionHandler{
+    NSURLSessionDataTask *task = [self.session dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        if(error){
+            NSLog(@"error when loading images %@",error.userInfo);
+        }
+        completionHandler(data);
+        [self.highPriorityTasks removeObject:task];
+    }];
+    task.priority=NSURLSessionTaskPriorityHigh;
+    [self.highPriorityTasks addObject:task];
+    [task resume];
+}
+
 
 @end

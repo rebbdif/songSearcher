@@ -12,7 +12,6 @@
 		04E2FFA81EBB90A50074C5D9 /* lection14.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 04E2FFA61EBB90A50074C5D9 /* lection14.xcdatamodeld */; };
 		04E2FFAA1EBB90A50074C5D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04E2FFA91EBB90A50074C5D9 /* Assets.xcassets */; };
 		04E2FFAD1EBB90A50074C5D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04E2FFAB1EBB90A50074C5D9 /* LaunchScreen.storyboard */; };
-		04E2FFB81EBB90A50074C5D9 /* lection14Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E2FFB71EBB90A50074C5D9 /* lection14Tests.m */; };
 		04E2FFC71EBBA0E20074C5D9 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E2FFC61EBBA0E20074C5D9 /* TableViewController.m */; };
 		04E2FFCA1EBBA11F0074C5D9 /* SearchResultsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E2FFC91EBBA11F0074C5D9 /* SearchResultsModel.m */; };
 		04E2FFCD1EBBA1480074C5D9 /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E2FFCC1EBBA1480074C5D9 /* NetworkManager.m */; };
@@ -41,8 +40,6 @@
 		04E2FFAC1EBB90A50074C5D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04E2FFAE1EBB90A50074C5D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04E2FFB31EBB90A50074C5D9 /* lection14Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = lection14Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		04E2FFB71EBB90A50074C5D9 /* lection14Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = lection14Tests.m; sourceTree = "<group>"; };
-		04E2FFB91EBB90A50074C5D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04E2FFC51EBBA0E20074C5D9 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
 		04E2FFC61EBBA0E20074C5D9 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
 		04E2FFC81EBBA11F0074C5D9 /* SearchResultsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchResultsModel.h; sourceTree = "<group>"; };
@@ -79,7 +76,6 @@
 			isa = PBXGroup;
 			children = (
 				04E2FF991EBB90A50074C5D9 /* lection14 */,
-				04E2FFB61EBB90A50074C5D9 /* lection14Tests */,
 				04E2FF981EBB90A50074C5D9 /* Products */,
 				63ACEF3B1EBD3B36007C0D41 /* Frameworks */,
 			);
@@ -113,15 +109,6 @@
 				04E2FF9B1EBB90A50074C5D9 /* main.m */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		04E2FFB61EBB90A50074C5D9 /* lection14Tests */ = {
-			isa = PBXGroup;
-			children = (
-				04E2FFB71EBB90A50074C5D9 /* lection14Tests.m */,
-				04E2FFB91EBB90A50074C5D9 /* Info.plist */,
-			);
-			path = lection14Tests;
 			sourceTree = "<group>";
 		};
 		04E2FFD11EBBABF70074C5D9 /* Controllers */ = {
@@ -333,7 +320,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04E2FFB81EBB90A50074C5D9 /* lection14Tests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

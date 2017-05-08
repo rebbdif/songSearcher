@@ -16,6 +16,7 @@
 @property(strong,nonatomic)NSString *trackName;
 @property(strong,nonatomic)NSString *price;
 @property(strong,nonatomic)UIImage *thumbnail;
+@property(strong,nonatomic)NSString *thumbnailURL;
 
 + (Item * )itemWithDictionary: (NSDictionary*) dict;
 
