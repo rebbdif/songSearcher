@@ -35,7 +35,7 @@
     return self;
 }
 
-+(BOOL)requiresConstraintBasedLayout{
++ (BOOL)requiresConstraintBasedLayout{
     return YES;
 }
 

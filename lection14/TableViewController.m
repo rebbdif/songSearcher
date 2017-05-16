@@ -41,7 +41,7 @@ static  NSString * reuseID =@"cell";
 
 #pragma mark - Search Bar Delegate
 
--(void)searchBarSearchButtonClicked:(UISearchBar *)searchBar{
+-(void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
     self.searchRequest= searchBar.text;
     [searchBar endEditing:YES];
     if(self.searchRequest){
@@ -70,34 +70,37 @@ static  NSString * reuseID =@"cell";
     TableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: reuseID forIndexPath:indexPath];
     Item *currentItem= self.model.items[indexPath.row];
     cell.trackName.text = currentItem.trackName;
-    if (currentItem.albumName){
+    if (currentItem.albumName) {
         cell.artistName.text = [NSString stringWithFormat:@"%@ [%@]",currentItem.artistName, currentItem.albumName];
-    }else{
+    } else {
         cell.artistName.text = currentItem.artistName;
     }
-    cell.price.text = currentItem.price;
+    if ([currentItem.price isEqualToString:@"-1"] || [currentItem.price isEqualToString:@"0"]){
+        cell.price.text = @"free";
+    } else {
+        cell.price.text = currentItem.price;
+    }
     cell.price.adjustsFontSizeToFitWidth=YES;
     
-    if(!currentItem.thumbnail){
+    if(!currentItem.thumbnail) {
         cell.thumbnail.image = [UIImage imageNamed:@"music"];
         __weak typeof(self) weakself=self;
-        [self.model downloadThumbnailForItem:indexPath withCompletionHandler:^(NSIndexPath *indexpath){
+        [self.model downloadThumbnailForItem:indexPath withCompletionHandler:^(NSIndexPath *indexpath) {
             dispatch_async(dispatch_get_main_queue(), ^{
                 TableViewCell * cell=[weakself.tableView cellForRowAtIndexPath:indexpath];
                 cell.thumbnail.image = ((Item *)(weakself.model.items[indexPath.row])).thumbnail;
-             //   cell.thumbnail.contentMode=UIViewContentModeScaleAspectFill;
             });
         }];
-    }else{
+    } else {
         cell.thumbnail.image = currentItem.thumbnail;
     }
     return cell;
 }
 
-- (void)didReceiveMemoryWarning{
+- (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     [self.model.networkManager.lowPriorityTasks removeAllObjects];
-    for (Item *item in self.model.items){
+    for (Item *item in self.model.items) {
         item.thumbnail=nil;
     }
 }

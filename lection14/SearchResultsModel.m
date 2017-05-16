@@ -10,7 +10,7 @@
 
 @implementation SearchResultsModel
 
-- (instancetype)init{
+- (instancetype)init {
     self=[super init];
     if(self){
         _networkManager=[NetworkManager new];
@@ -18,7 +18,7 @@
     return self;
 }
 
-- (void)getItemsForRequest: (NSString*) request withCompletionHandler: (void (^)(void))completionHandler{
+- (void)getItemsForRequest: (NSString*) request withCompletionHandler: (void (^)(void))completionHandler {
     NSString *normalizedRequest=[request stringByReplacingOccurrencesOfString:@" " withString:@"+"];
     NSString *escapedString = [normalizedRequest stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLHostAllowedCharacterSet]];
     NSString *urls =[NSString stringWithFormat:@"https://itunes.apple.com/search?term=%@",escapedString];
@@ -31,13 +31,13 @@
     }];
 }
 
-- (NSArray *)parseData:(NSData *)data{
-    if (!data){
+- (NSArray *)parseData:(NSData *)data {
+    if (!data) {
         return nil;
-    }else{
+    } else {
     NSError *error=nil;
     NSDictionary* json=[NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&error];
-    if(error){
+    if(error) {
         NSLog(@"ERROR PARSING JSON %@",error.userInfo);
     }
     
@@ -59,7 +59,7 @@
     }
 }
 
--(void)dealloc{
+-(void)dealloc {
     _networkManager=nil;
 }
 
