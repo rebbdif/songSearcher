@@ -8,11 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NetworkManager : NSObject
+@interface SLVNetworkManager : NSObject
 
-@property (strong,nonatomic) NSMutableArray *highPriorityTasks;
-@property (strong,nonatomic) NSMutableArray *lowPriorityTasks;
+@property (strong, nonatomic) NSMutableArray *highPriorityTasks;
+@property (strong, nonatomic) NSMutableArray *lowPriorityTasks;
 
-- (void)getModelFromURL: (NSURL *) url withCompletionHandler: (void (^)(NSData * data))completionHandler;
+- (void)getModelFromURL: (NSURL *) url withCompletionHandler:(void (^)(NSData * data))completionHandler;
+
 - (void)downloadImageFromURL: (NSURL *)url withCompletionHandler:(void (^)(NSData *data))completionHandler;
+
 @end

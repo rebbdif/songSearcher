@@ -6,29 +6,29 @@
 //  Copyright © 2017 iOS-School-1. All rights reserved.
 //
 
-#import "NetworkManager.h"
+#import "SLVNetworkManager.h"
 
-@interface NetworkManager()
-@property (strong,nonatomic, readonly) NSURLSession *session;
+@interface SLVNetworkManager()
+
+@property (strong, nonatomic, readonly) NSURLSession *session;
+
 @end
 
-@implementation NetworkManager
+@implementation SLVNetworkManager
 
--(instancetype)init{
-    self=[super init];
-    if(self){
-        _session=[NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        _session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
         _highPriorityTasks = [NSMutableArray new];
-        _lowPriorityTasks = [NSMutableArray new];
     }
     return self;
 }
 
-- (void)getModelFromURL: (NSURL *) url withCompletionHandler: (void (^)(NSData * data))completionHandler{
+- (void)getModelFromURL:(NSURL *)url withCompletionHandler:(void (^)(NSData * data))completionHandler {
     NSURLSessionDataTask * task = [self.session dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-        completionHandler(data);
-        if(error){
-            NSLog(@"error while downloading data %@",error.userInfo);
+        if (data) {
+            completionHandler(data);
         }
     }];
     task.priority=NSURLSessionTaskPriorityHigh;
@@ -37,10 +37,9 @@
 
 - (void)downloadImageFromURL: (NSURL *)url withCompletionHandler:(void (^)(NSData *data))completionHandler{
     NSURLSessionDataTask *task = [self.session dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-        if(error){
-            NSLog(@"error when loading images %@",error.userInfo);
+        if (data) {
+            completionHandler(data);
         }
-        completionHandler(data);
         [self.highPriorityTasks removeObject:task];
     }];
     task.priority=NSURLSessionTaskPriorityHigh;

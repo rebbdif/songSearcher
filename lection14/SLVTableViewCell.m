@@ -6,25 +6,25 @@
 //  Copyright © 2017 iOS-School-1. All rights reserved.
 //
 
-#import "TableViewCell.h"
+#import "SLVTableViewCell.h"
 #import "Masonry/Masonry.h"
 
-@implementation TableViewCell
+@implementation SLVTableViewCell
 
-- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
-    self=[super initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:reuseIdentifier];
-    if(self){
-        _trackName=[UILabel new];
-        _artistName=[UILabel new];
-        _album=[UILabel new];
-        _price=[UILabel new];
-        _thumbnail=[UIImageView new];
+- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
+    self = [super initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:reuseIdentifier];
+    if (self) {
+        _trackName = [UILabel new];
+        _artistName = [UILabel new];
+        _album = [UILabel new];
+        _price = [UILabel new];
+        _thumbnail = [UIImageView new];
         
-        _thumbnail.backgroundColor=[UIColor colorWithRed:1 green:0 blue:0 alpha:0.5];
-        _price.font=[UIFont systemFontOfSize:14];
-        _price.layer.borderWidth=0.5;
-        _price.layer.borderColor=[UIColor greenColor].CGColor;
-        _price.textAlignment=NSTextAlignmentCenter;
+        _thumbnail.backgroundColor = [UIColor colorWithRed:1 green:0 blue:0 alpha:0.5];
+        _price.font = [UIFont systemFontOfSize:14];
+        _price.layer.borderWidth = 0.5;
+        _price.layer.borderColor = [UIColor greenColor].CGColor;
+        _price.textAlignment = NSTextAlignmentCenter;
         
         [self.contentView addSubview:_trackName];
         [self.contentView addSubview:_artistName];
@@ -40,13 +40,13 @@
 }
 
 -(void)updateConstraints{
-    UIEdgeInsets padding =UIEdgeInsetsMake(6, 12, 6, 3);
+    UIEdgeInsets padding = UIEdgeInsetsMake(6, 12, 6, 3);
     [_thumbnail mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.contentView.mas_left).with.offset(8);
         make.top.equalTo(self.contentView.mas_top).with.offset(2);
         make.bottom.equalTo(self.contentView.mas_bottom).with.offset(-2);
         make.size.mas_equalTo(self.contentView.mas_height).sizeOffset(CGSizeMake(-4, -4));
-        _thumbnail.layer.cornerRadius=self.contentView.frame.size.height/2 -2;
+        _thumbnail.layer.cornerRadius=self.contentView.frame.size.height / 2 -2;
         _thumbnail.layer.masksToBounds = YES;
     }];
     [_price mas_makeConstraints:^(MASConstraintMaker *make) {

@@ -8,15 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		04E2FF9C1EBB90A50074C5D9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E2FF9B1EBB90A50074C5D9 /* main.m */; };
-		04E2FF9F1EBB90A50074C5D9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E2FF9E1EBB90A50074C5D9 /* AppDelegate.m */; };
-		04E2FFA81EBB90A50074C5D9 /* lection14.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 04E2FFA61EBB90A50074C5D9 /* lection14.xcdatamodeld */; };
+		04E2FF9F1EBB90A50074C5D9 /* SLVAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E2FF9E1EBB90A50074C5D9 /* SLVAppDelegate.m */; };
 		04E2FFAA1EBB90A50074C5D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04E2FFA91EBB90A50074C5D9 /* Assets.xcassets */; };
 		04E2FFAD1EBB90A50074C5D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04E2FFAB1EBB90A50074C5D9 /* LaunchScreen.storyboard */; };
-		04E2FFC71EBBA0E20074C5D9 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E2FFC61EBBA0E20074C5D9 /* TableViewController.m */; };
-		04E2FFCA1EBBA11F0074C5D9 /* SearchResultsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E2FFC91EBBA11F0074C5D9 /* SearchResultsModel.m */; };
-		04E2FFCD1EBBA1480074C5D9 /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E2FFCC1EBBA1480074C5D9 /* NetworkManager.m */; };
-		04E2FFD01EBBA60F0074C5D9 /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E2FFCF1EBBA60F0074C5D9 /* Item.m */; };
-		04E2FFD61EBBAC570074C5D9 /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E2FFD51EBBAC570074C5D9 /* TableViewCell.m */; };
+		04E2FFC71EBBA0E20074C5D9 /* SLVTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E2FFC61EBBA0E20074C5D9 /* SLVTableViewController.m */; };
+		04E2FFCA1EBBA11F0074C5D9 /* SLVSearchResultsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E2FFC91EBBA11F0074C5D9 /* SLVSearchResultsModel.m */; };
+		04E2FFCD1EBBA1480074C5D9 /* SLVNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E2FFCC1EBBA1480074C5D9 /* SLVNetworkManager.m */; };
+		04E2FFD01EBBA60F0074C5D9 /* SLVItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E2FFCF1EBBA60F0074C5D9 /* SLVItem.m */; };
+		04E2FFD61EBBAC570074C5D9 /* SLVTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E2FFD51EBBAC570074C5D9 /* SLVTableViewCell.m */; };
 		63ACEF3E1EBD3F53007C0D41 /* Masonry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63ACEF3C1EBD3B37007C0D41 /* Masonry.framework */; };
 /* End PBXBuildFile section */
 
@@ -33,23 +32,22 @@
 /* Begin PBXFileReference section */
 		04E2FF971EBB90A50074C5D9 /* lection14.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = lection14.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04E2FF9B1EBB90A50074C5D9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		04E2FF9D1EBB90A50074C5D9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		04E2FF9E1EBB90A50074C5D9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		04E2FFA71EBB90A50074C5D9 /* lection14.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = lection14.xcdatamodel; sourceTree = "<group>"; };
+		04E2FF9D1EBB90A50074C5D9 /* SLVAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLVAppDelegate.h; sourceTree = "<group>"; };
+		04E2FF9E1EBB90A50074C5D9 /* SLVAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SLVAppDelegate.m; sourceTree = "<group>"; };
 		04E2FFA91EBB90A50074C5D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04E2FFAC1EBB90A50074C5D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04E2FFAE1EBB90A50074C5D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04E2FFB31EBB90A50074C5D9 /* lection14Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = lection14Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		04E2FFC51EBBA0E20074C5D9 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
-		04E2FFC61EBBA0E20074C5D9 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
-		04E2FFC81EBBA11F0074C5D9 /* SearchResultsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchResultsModel.h; sourceTree = "<group>"; };
-		04E2FFC91EBBA11F0074C5D9 /* SearchResultsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchResultsModel.m; sourceTree = "<group>"; };
-		04E2FFCB1EBBA1480074C5D9 /* NetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkManager.h; sourceTree = "<group>"; };
-		04E2FFCC1EBBA1480074C5D9 /* NetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkManager.m; sourceTree = "<group>"; };
-		04E2FFCE1EBBA60F0074C5D9 /* Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Item.h; sourceTree = "<group>"; };
-		04E2FFCF1EBBA60F0074C5D9 /* Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Item.m; sourceTree = "<group>"; };
-		04E2FFD41EBBAC570074C5D9 /* TableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewCell.h; sourceTree = "<group>"; };
-		04E2FFD51EBBAC570074C5D9 /* TableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewCell.m; sourceTree = "<group>"; };
+		04E2FFC51EBBA0E20074C5D9 /* SLVTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLVTableViewController.h; sourceTree = "<group>"; };
+		04E2FFC61EBBA0E20074C5D9 /* SLVTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLVTableViewController.m; sourceTree = "<group>"; };
+		04E2FFC81EBBA11F0074C5D9 /* SLVSearchResultsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLVSearchResultsModel.h; sourceTree = "<group>"; };
+		04E2FFC91EBBA11F0074C5D9 /* SLVSearchResultsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLVSearchResultsModel.m; sourceTree = "<group>"; };
+		04E2FFCB1EBBA1480074C5D9 /* SLVNetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLVNetworkManager.h; sourceTree = "<group>"; };
+		04E2FFCC1EBBA1480074C5D9 /* SLVNetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLVNetworkManager.m; sourceTree = "<group>"; };
+		04E2FFCE1EBBA60F0074C5D9 /* SLVItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLVItem.h; sourceTree = "<group>"; };
+		04E2FFCF1EBBA60F0074C5D9 /* SLVItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLVItem.m; sourceTree = "<group>"; };
+		04E2FFD41EBBAC570074C5D9 /* SLVTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLVTableViewCell.h; sourceTree = "<group>"; };
+		04E2FFD51EBBAC570074C5D9 /* SLVTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLVTableViewCell.m; sourceTree = "<group>"; };
 		63ACEF3C1EBD3B37007C0D41 /* Masonry.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Masonry.framework; path = Carthage/Build/iOS/Masonry.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -114,8 +112,8 @@
 		04E2FFD11EBBABF70074C5D9 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				04E2FFC51EBBA0E20074C5D9 /* TableViewController.h */,
-				04E2FFC61EBBA0E20074C5D9 /* TableViewController.m */,
+				04E2FFC51EBBA0E20074C5D9 /* SLVTableViewController.h */,
+				04E2FFC61EBBA0E20074C5D9 /* SLVTableViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -123,10 +121,10 @@
 		04E2FFD21EBBAC040074C5D9 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				04E2FFCE1EBBA60F0074C5D9 /* Item.h */,
-				04E2FFCF1EBBA60F0074C5D9 /* Item.m */,
-				04E2FFC81EBBA11F0074C5D9 /* SearchResultsModel.h */,
-				04E2FFC91EBBA11F0074C5D9 /* SearchResultsModel.m */,
+				04E2FFCE1EBBA60F0074C5D9 /* SLVItem.h */,
+				04E2FFCF1EBBA60F0074C5D9 /* SLVItem.m */,
+				04E2FFC81EBBA11F0074C5D9 /* SLVSearchResultsModel.h */,
+				04E2FFC91EBBA11F0074C5D9 /* SLVSearchResultsModel.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -134,8 +132,8 @@
 		04E2FFD31EBBAC0F0074C5D9 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				04E2FFCB1EBBA1480074C5D9 /* NetworkManager.h */,
-				04E2FFCC1EBBA1480074C5D9 /* NetworkManager.m */,
+				04E2FFCB1EBBA1480074C5D9 /* SLVNetworkManager.h */,
+				04E2FFCC1EBBA1480074C5D9 /* SLVNetworkManager.m */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -143,8 +141,8 @@
 		04E2FFD71EBBAC620074C5D9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				04E2FFD41EBBAC570074C5D9 /* TableViewCell.h */,
-				04E2FFD51EBBAC570074C5D9 /* TableViewCell.m */,
+				04E2FFD41EBBAC570074C5D9 /* SLVTableViewCell.h */,
+				04E2FFD51EBBAC570074C5D9 /* SLVTableViewCell.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -155,9 +153,8 @@
 				04E2FFA91EBB90A50074C5D9 /* Assets.xcassets */,
 				04E2FFAB1EBB90A50074C5D9 /* LaunchScreen.storyboard */,
 				04E2FFAE1EBB90A50074C5D9 /* Info.plist */,
-				04E2FFA61EBB90A50074C5D9 /* lection14.xcdatamodeld */,
-				04E2FF9D1EBB90A50074C5D9 /* AppDelegate.h */,
-				04E2FF9E1EBB90A50074C5D9 /* AppDelegate.m */,
+				04E2FF9D1EBB90A50074C5D9 /* SLVAppDelegate.h */,
+				04E2FF9E1EBB90A50074C5D9 /* SLVAppDelegate.m */,
 			);
 			name = Application;
 			sourceTree = "<group>";
@@ -305,14 +302,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04E2FFD01EBBA60F0074C5D9 /* Item.m in Sources */,
-				04E2FFA81EBB90A50074C5D9 /* lection14.xcdatamodeld in Sources */,
-				04E2FFCD1EBBA1480074C5D9 /* NetworkManager.m in Sources */,
-				04E2FF9F1EBB90A50074C5D9 /* AppDelegate.m in Sources */,
-				04E2FFD61EBBAC570074C5D9 /* TableViewCell.m in Sources */,
+				04E2FFD01EBBA60F0074C5D9 /* SLVItem.m in Sources */,
+				04E2FFCD1EBBA1480074C5D9 /* SLVNetworkManager.m in Sources */,
+				04E2FF9F1EBB90A50074C5D9 /* SLVAppDelegate.m in Sources */,
+				04E2FFD61EBBAC570074C5D9 /* SLVTableViewCell.m in Sources */,
 				04E2FF9C1EBB90A50074C5D9 /* main.m in Sources */,
-				04E2FFC71EBBA0E20074C5D9 /* TableViewController.m in Sources */,
-				04E2FFCA1EBBA11F0074C5D9 /* SearchResultsModel.m in Sources */,
+				04E2FFC71EBBA0E20074C5D9 /* SLVTableViewController.m in Sources */,
+				04E2FFCA1EBBA11F0074C5D9 /* SLVSearchResultsModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -524,19 +520,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		04E2FFA61EBB90A50074C5D9 /* lection14.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				04E2FFA71EBB90A50074C5D9 /* lection14.xcdatamodel */,
-			);
-			currentVersion = 04E2FFA71EBB90A50074C5D9 /* lection14.xcdatamodel */;
-			path = lection14.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 04E2FF8F1EBB90A50074C5D9 /* Project object */;
 }
